@@ -33,6 +33,7 @@
     #top {
       height: 56px;
       /* background: lightgray; */
+      box-shadow: 0px 1px 0px lightgray;
     }
 
     #top .row {
@@ -146,6 +147,7 @@
       border: 1px solid #065fd4;
       border-radius: 0%;
       padding: 8px 15px;
+      font-weight: 300;
     }
 
     .icon-btn {
@@ -164,6 +166,78 @@
 
     .icon-btn:active {
       background: #F5F5F5;
+    }
+
+    #sidebar {
+      /* background: lightsalmon; */
+      width: calc(1vw + 19.6vw);
+      height: calc(100vh - 56px);
+      overflow: scroll;
+      z-index: 1;
+    }
+
+    #sidebar .container {
+      margin: 0 1vw;
+      border-bottom: 1px solid lightgray;
+    }
+
+    #sidebar .container:not(:nth-child(8)) a {
+      display: block;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    #sidebar .container a:hover {
+      cursor: pointer;
+    }
+
+    #sidebar .container:not(:nth-child(8)) a:hover {
+      background: #F5F5F5
+    }
+
+    #sidebar .container a i {
+      display: inline-block;
+      width: 25px;
+      text-align: center;
+    }
+
+    #sidebar .container a span {
+      padding-left: 15px;
+    }
+
+    #sidebar .container .sign-in,
+    #sidebar .container .info {
+      margin: 20px;
+    }
+
+    #sidebar .container .sign-in .text {
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    #sidebar .container .sign-in .icon-btn {
+      width: 120px;
+      height: 48px;
+      color: #065fd4;
+      border: 1px solid #065fd4;
+      border-radius: 0%;
+      padding: 8px 15px;
+      font-weight: 300;
+    }
+
+    #sidebar .container:nth-child(4) .text,
+    #sidebar .container:nth-child(6) .text,
+    #sidebar .container:nth-child(8) .text {
+      margin: 20px auto 10px 10px;
+    }
+
+    #sidebar .container:nth-child(8) .text {
+      font-weight: 300;
+    }
+
+    #sidebar .container:last-child .info a {
+      display: inline;
     }
   </style>
 
@@ -197,11 +271,74 @@
     </div>
   </div>
   <div id="sidebar">
-    <button>16<i class="fa-solid fa-microphone"></i></button>
-  </div>
-  <div id="category-btn"></div>
-  <div id="premium-ads"></div>
-  <div id="main"></div>
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-house"></i><span>首頁</span>
+      </a>
+      <a href="#"><i class="fa-regular fa-compass"></i><span>探索</span></a>
+      <a href="#"><i class="fa-solid fa-video"></i><span>Shorts</span></a>
+      <a href="#"><i class="fa-solid fa-square-rss"></i><span>訂閱內容</span></a>
+    </div>
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-photo-film"></i><span>媒體庫</span></a>
+      <a href="#"><i class="fa-solid fa-clock-rotate-left"></i><span>觀看紀錄</span></a>
+    </div>
+    <div class="container">
+      <div class="sign-in">
+        <div class="text">登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</div>
+        <button class="icon-btn"><i class="fa-regular fa-circle-user"></i>&nbsp;&nbsp;登入</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text">YOUTUBE 精選</div>
+      <a href="#"><i class="fa-solid fa-music"></i><span>音樂</span></a>
+      <a href="#"><i class="fa-solid fa-trophy"></i><span>體育</span></a>
+      <a href="#"><i class="fa-solid fa-gamepad"></i><span>遊戲</span></a>
+      <a href="#"><i class="fa-solid fa-film"></i><span>電影</span></a>
+      <a href="#"><i class="fa-regular fa-newspaper"></i><span>新聞</span></a>
+      <a href="#"><i class="fa-solid fa-tower-broadcast"></i><span>直播</span></a>
+      <a href="#"><i class="fa-solid fa-street-view"></i><span>360 度影片</span></a>
+    </div>
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-circle-plus"></i><span>瀏覽頻道</span></a>
+    </div>
+    <div class="container">
+      <div class="text">更多 YOUTUBE 功能</div>
+      <a href="#"><i class="fa-brands fa-youtube"></i><span>YouTube Premium</span></a>
+      <a href="#"><i class="fa-solid fa-tower-broadcast"></i><span>直播</span></a>
+    </div>
+    <div class="container">
+      <a href="#"><i class="fa-solid fa-gear"></i><span>設定</span></a>
+      <a href="#"><i class="fa-solid fa-flag"></i><span>檢舉紀錄</span></a>
+      <a href="#"><i class="fa-regular fa-circle-question"></i><span>說明</span></a>
+      <a href="#"><i class="fa-regular fa-comment-dots"></i><span>提供意見</span></a>
+    </div>
+    <div class="container">
+      <div class="info">
+
+        <div class="text">
+          <a href="#">簡介</a>
+          <a href="#">媒體</a>
+          <a href="#">版權</a>
+          <a href="#">與我們聯絡</a>
+          <a href="#">創作者</a>
+          <a href="#">廣告</a>
+          <a href="#">開發人員</a>
+        </div>
+        <div class="text">
+          <a href="#">條款</a>
+          <a href="#">隱私權</a>
+          <a href="#">政策與安全性</a>
+          <a href="#">YouTube 運作方式</a>
+          <a href="#">測試新功能</a>
+        </div>
+        <div class="text">
+          © 2022 Google LLC
+        </div>
+      </div>
+    </div>
+    <div id="category-btn"></div>
+    <div id="premium-ads"></div>
+    <div id="main"></div>
 </body>
 
 </html>
