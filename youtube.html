@@ -260,9 +260,9 @@
 
     #categorybar .container {
       line-height: 40px;
-      text-align: right;
+      text-align: left;
       margin-top: 8px;
-      padding-right: 4vw;
+      padding-left: 8vw;
     }
 
     #categorybar .container label {
@@ -289,6 +289,72 @@
     #categorybar .container input:checked+span {
       background-color: #000;
       color: white;
+    }
+
+    /* 訂閱推播廣告 ---------------------------------------------------------------------------------------------------- */
+    #premium-ads {
+      /* background: lightsteelblue; */
+      width: 79.4vw;
+      height: 30vh;
+      float: right;
+    }
+
+    #premium-ads .col {
+      float: left;
+      height: 30vh;
+    }
+
+    #premium-ads .col:nth-child(odd) {
+      /* background: lightgoldenrodyellow; */
+      width: 4%;
+    }
+
+    #premium-ads .col:nth-child(even) {
+      /* background: lightcoral; */
+      width: 92%;
+    }
+
+    #premium-ads span {
+      display: block;
+    }
+
+    #premium-ads span:nth-child(1) {
+      /* background: yellow; */
+      font-size: 2rem;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      letter-spacing: -1px;
+      margin: 40px 0px 0px 0px;
+    }
+
+    #premium-ads span:nth-child(2) {
+      /* background: blue; */
+      font-size: 3rem;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      margin: 8px 0px;
+    }
+
+    #premium-ads a {
+      display: inline-block;
+      color: #065fd4;
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      border: 3px solid #065fd4;
+      border-radius: 4px;
+      padding: 10px 30px;
+    }
+
+    #premium-ads .col button {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      font-size: 2rem;
+      margin-top: 15px;
+    }
+
+    #premium-ads .col button:hover {
+      cursor: pointer;
     }
   </style>
 
@@ -410,7 +476,22 @@
       </form>
     </div>
   </div>
-  <div id="premium-ads"></div>
+  <!-- 訂閱推播廣告 -->
+  <div id="premium-ads">
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <span><i class="fa-brands fa-youtube" style="color: red;"></i>&nbsp;YouTube&nbsp;Premium</span>
+          <span>只需支付一筆費用，<br>一個家庭就能享有 6 個帳戶。</span>
+          <a href="#">立即訂閱</a>
+        </div>
+        <div class="col">
+          <button><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="main"></div>
 </body>
 
