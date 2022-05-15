@@ -178,7 +178,7 @@
       width: calc(1vw + 19.6vw);
       height: calc(100vh - 56px);
       overflow: hidden;
-      float: left;
+      position: absolute;
     }
 
     #sidebar:hover {
@@ -249,6 +249,12 @@
       display: inline;
     }
 
+    #main {
+      height: calc(100vh - 112px);
+      float: right;
+      overflow: scroll;
+    }
+
     /* 類別鈕 ---------------------------------------------------------------------------------------------------- */
     #categorybar {
       /* background: lightskyblue; */
@@ -272,7 +278,7 @@
     #categorybar .container span {
       display: inline-block;
       background: #F5F5F5;
-      border: 1px solid lightgray;
+      border: 1px solid #D3D3D3;
       border-radius: 50px;
       padding: 0px 15px;
     }
@@ -332,6 +338,7 @@
       font-size: 3rem;
       font-family: 'Oswald', sans-serif;
       font-weight: 500;
+      letter-spacing: 2px;
       margin: 8px 0px;
     }
 
@@ -355,6 +362,95 @@
 
     #premium-ads .col button:hover {
       cursor: pointer;
+    }
+
+    /* 影片內容區 ---------------------------------------------------------------------------------------------------- */
+    #video {
+      /* background: lightsteelblue; */
+      width: 79.4vw;
+      height: 100%;
+      float: right;
+    }
+
+    #video .col {
+      float: left;
+      height: 30vh;
+      margin: 20px 0px;
+    }
+
+    #video .col:nth-child(odd) {
+      /* background: lightgoldenrodyellow; */
+      width: 3%;
+    }
+
+    #video .col:nth-child(even) {
+      /* background: lightcoral; */
+      width: 94%;
+    }
+
+    #video .col .card {
+      /* background: #000; */
+      width: 24.5%;
+      height: 100%;
+      float: left;
+      margin-right: 0.4%;
+    }
+
+    #video .col .card:nth-child(1) {
+      margin-left: 0.4%;
+    }
+
+    #video .col .card .top {
+      width: 100%;
+      height: 59%;
+    }
+
+    #video .col .card .bottom {
+      width: 100%;
+      height: 40%;
+    }
+
+    #video .col .card .left {
+      /* background: lightblue; */
+      width: 20%;
+      height: 100%;
+      float: left;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    #video .col .card .right {
+      /* background: lightyellow; */
+      width: 80%;
+      height: 100%;
+      float: right;
+      padding-top: 10px;
+    }
+
+    #video .col .card .left img {
+      border-radius: 50%;
+    }
+
+    #video .col .card .right span:nth-child(1) {
+      /* background: lightgray; */
+      display: inline-block;
+      width: 100%;
+      height: 40%;
+      padding: 0px 15px;
+      overflow: hidden;
+    }
+
+    #video .col .card .right span:nth-child(2),
+    #video .col .card .right span:nth-child(3) {
+      /* background: lightgray; */
+      display: inline-block;
+      width: 100%;
+      height: 20%;
+      padding: 0px 15px;
+      overflow: hidden;
+      color: #808080;
+      font-size: 0.9rem;
+      line-height: 24px;
     }
   </style>
 
@@ -456,6 +552,7 @@
     </div>
   </div>
 
+
   <!-- 類別鈕 -->
   <div id="categorybar">
     <div class="container">
@@ -476,23 +573,301 @@
       </form>
     </div>
   </div>
-  <!-- 訂閱推播廣告 -->
-  <div id="premium-ads">
-    <div class="container">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <span><i class="fa-brands fa-youtube" style="color: red;"></i>&nbsp;YouTube&nbsp;Premium</span>
-          <span>只需支付一筆費用，<br>一個家庭就能享有 6 個帳戶。</span>
-          <a href="#">立即訂閱</a>
-        </div>
-        <div class="col">
-          <button><i class="fa-solid fa-xmark"></i></button>
+
+  <div id="main">
+    <!-- 訂閱推播廣告 -->
+    <div id="premium-ads">
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <span><i class="fa-brands fa-youtube" style="color: red;"></i>&nbsp;YouTube&nbsp;Premium</span>
+            <span>只需支付一筆費用，<br>一個家庭就能享有 6 個帳戶。</span>
+            <a href="#">立即訂閱</a>
+          </div>
+          <div class="col">
+            <button><i class="fa-solid fa-xmark"></i></button>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- 影片內容區 -->
+    <div id="video">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/kgx4WGK0oNU?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=1">
+              </div>
+              <div class="right">
+                <span class="title" size="20">jazz/lofi hip hop radio🌱適合學習/放鬆/讀書 [LIVE24/7] 舒服的爵士樂/徜徉於輕柔旋律中🎷</span>
+                <span class="youtuber">阿鮑Abao</span>
+                <span class="subscription">觀看次數：1,700萬次・1 小時前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/Xb3Anz85qx4?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=2">
+              </div>
+              <div class="right">
+                <span class="title" size="20">誰家的小孩子！怎麼教的啊！｜小時候東西被偷｜霸軒與小美 Baxuan & Mei</span>
+                <span class="youtuber">
+                  霸軒與小美 Baxuan & Mei
+                </span>
+                <span class="subscription">觀看次數：1.7萬次・1 小時前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/VzpeRnzDr54?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=3">
+              </div>
+              <div class="right">
+                <span class="title" size="20">【奇異博士2看前必知】《汪達幻視》在演什麼? 一口氣看完緋紅女巫成為大反派的恐怖故事 | 劇情彩蛋 深度解析 | 超粒方 |
+                  Disney+</span>
+                <span class="youtuber">超粒方</span>
+                <span class="subscription">觀看次數：135 萬次・6 個月前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/cUnmR8LhZXU?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=4">
+              </div>
+              <div class="right">
+                <span class="title" size="20">這群人 TGOP │婚宴的經典語錄 Classic Wedding Banquet Quotations
+                  ft.Bii畢書盡、眾量級Andy老師</span>
+                <span class="youtuber">這群人TGOP</span>
+                <span class="subscription">觀看次數：17萬次・1 小時前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/9q-xeLzy6Ps?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=5">
+              </div>
+              <div class="right">
+                <span class="title" size="20">多益單字 10 min ⎮ 50 Corporate Development 企業發展 ⎮ 怕渴英文</span>
+                <span class="youtuber">Parker English怕渴英文
+                </span>
+                <span class="subscription">觀看次數：2,643次・5 天前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/twFOOUTfITQ?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=6">
+              </div>
+              <div class="right">
+                <span class="title" size="20">整理自己不夠，朋友也受惠😜！粉絲和我分享他們「極簡後的變化」⋯⋯太驚人了！（第五集）</span>
+                <span class="youtuber">末羊子 dontkjoanne
+                </span>
+                <span class="subscription">觀看次數：8443次・2 小時前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/Y3dLNYOfFDA?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=7">
+              </div>
+              <div class="right">
+                <span class="title" size="20">解決 Excel 任何疑難雜症的最終方案！快速上手 VBA 讓你變成 Excel 類大師！| Excel 教學 50</span>
+                <span class="youtuber">PAPAYA 電腦教室</span>
+                <span class="subscription">觀看次數：4.1萬次・4 天前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/qo3H-VgXmHE?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=8">
+              </div>
+              <div class="right">
+                <span class="title" size="20">阿翰po影片 │算命阿姨 九天玄女之天女散花</span>
+                <span class="youtuber">阿翰po影片</span>
+                <span class="subscription">觀看次數：960萬次・1 個月前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/ymZ_NzZHaQM?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=9">
+              </div>
+              <div class="right">
+                <span class="title" size="20">【快感上瘾?】如何欺骗大脑做困难的事!</span>
+                <span class="youtuber">shuaisoserious</span>
+                <span class="subscription">觀看次數：87萬次・4 個月前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/9gYA4GUBXvw?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=10">
+              </div>
+              <div class="right">
+                <span class="title" size="20">【小吳】沒看到不能回家😂『動物園賓果連連看🔥』為了看”XX”命運超坎坷xDD！怎麼這麼遠…..(ft.ALLIE)</span>
+                <span class="youtuber">見習網美小吳</span>
+                <span class="subscription">觀看次數：31萬次・2 天前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/yDTxO5lux1U?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=11">
+              </div>
+              <div class="right">
+                <span class="title"
+                  size="20">遇過最雷的旅館休息經驗｜現在的國中生喜歡的明星｜工作後才知道的職場禮儀｜最有義氣的一刻【Dcard尋奇EP78】｜Dcard.Video</span>
+                <span class="youtuber">Dcard</span>
+                <span class="subscription">觀看次數：40萬次・4 天前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/4YPtlM2_hDI?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=12">
+              </div>
+              <div class="right">
+                <span class="title" size="20">【聲林之王2】EP9 純享版｜屁孩 玖壹壹 來個蹦蹦｜林宥嘉 蕭敬騰 戴佩妮 宋念宇 梁文音 Jungle Voice 2</span>
+                <span class="youtuber">聲林之王 Jungle Voice</span>
+                <span class="subscription">觀看次數：717萬次・2 年前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/Z3QvVMIaLlI?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=13">
+              </div>
+              <div class="right">
+                <span class="title" size="20">如果沒來日本，我可能永遠也不知道（２２）</span>
+                <span class="youtuber">在日本吃魚的小超人</span>
+                <span class="subscription">觀看次數：44次・3 小時前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/VzaEzHMhM-E?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=14">
+              </div>
+              <div class="right">
+                <span class="title" size="20">9種不起眼的物品巧利用｜變廢為寶再利用DIY｜生活中小物品，意想不到的用途</span>
+                <span class="youtuber">Minimalist Paik 極簡小白</span>
+                <span class="subscription">觀看次數：1406萬次・7 個月前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/znjRqgB45BM?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=15">
+              </div>
+              <div class="right">
+                <span class="title" size="20">開學挑筆電！新台幣一萬五至三萬元，五台高 CP 值機種推薦給你（AVITA、Acer 宏碁、ASUS 華碩、HP）</span>
+                <span class="youtuber">電獺少女-女孩的科技日常</span>
+                <span class="subscription">觀看次數：46萬次・1 年前</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="top"><iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/qO_foLbBuqo?controls=0" title="YouTube video player"
+                frameborder="0"></iframe></div>
+            <div class="bottom">
+              <div class="left">
+                <img src="https://picsum.photos/50/50/?random=16">
+              </div>
+              <div class="right">
+                <span class="title"
+                  size="20">阿嬤浴室神回春！2天完工，30年老舊浴室變身北歐極簡風，免釘牆收納、DIY刷牆、門片貼皮、PVC地墊防水封邊、給你滿滿乾貨大集合｜收納改造研究室｜蛙家</span>
+                <span class="youtuber">Watuber蛙家有個蛙土伯</span>
+                <span class="subscription">觀看次數：85萬次・1 年前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
   </div>
-  <div id="main"></div>
 </body>
 
 </html>
