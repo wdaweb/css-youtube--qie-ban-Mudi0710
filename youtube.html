@@ -30,6 +30,7 @@
       color: #000;
     }
 
+    /* 頂端列 ---------------------------------------------------------------------------------------------------- */
     #top {
       height: 56px;
       /* background: lightgray; */
@@ -47,6 +48,25 @@
       height: 56px;
     }
 
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      border-radius: 50%;
+      padding: 8px;
+      font-size: 1.3rem;
+    }
+
+    .icon-btn:hover {
+      cursor: pointer;
+    }
+
+    .icon-btn:active {
+      background: #F5F5F5;
+    }
+
+    /* 頂端列 -logo區 -------------------------------------------------- */
     #top .col:nth-child(1) {
       /* background: lightcoral; */
       line-height: 45px;
@@ -72,6 +92,7 @@
       vertical-align: super;
     }
 
+    /* 頂端列 -搜尋區 -------------------------------------------------- */
     #top .col:nth-child(2) {
       /* background: lightgoldenrodyellow; */
       width: 60%;
@@ -98,7 +119,7 @@
       margin-left: 8px;
     }
 
-    #top .col:nth-child(2) input {
+    #top .col:nth-child(2) #typing input {
       width: 80%;
       height: 38px;
       border: 1px solid lightgray;
@@ -106,7 +127,7 @@
       float: left;
     }
 
-    #top .col:nth-child(2) .search-btn {
+    #top .col:nth-child(2) #typing .search-btn {
       width: 10%;
       height: 38px;
       background: #F5F5F5;
@@ -116,17 +137,18 @@
       float: left;
     }
 
-    #top .col:nth-child(2) .search-btn:hover {
+    #top .col:nth-child(2) #typing .search-btn:hover {
       cursor: pointer;
     }
 
-    #top .col:nth-child(2) #search-bar .icon-btn {
+    #top .col:nth-child(2) #search-bar #typing .icon-btn {
       width: 5%;
       height: 38px;
       float: left;
       margin-left: 10px;
     }
 
+    /* 頂端列 -設定區 -------------------------------------------------- */
     #top .col:nth-child(3) {
       /* background: lightcyan; */
       line-height: 56px;
@@ -150,33 +172,19 @@
       font-weight: 300;
     }
 
-    .icon-btn {
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0);
-      border: none;
-      border-radius: 50%;
-      padding: 8px;
-      font-size: 1.3rem;
-    }
-
-    .icon-btn:hover {
-      cursor: pointer;
-    }
-
-    .icon-btn:active {
-      background: #F5F5F5;
-    }
-
+    /* 側邊欄 ---------------------------------------------------------------------------------------------------- */
     #sidebar {
       /* background: lightsalmon; */
       width: calc(1vw + 19.6vw);
       height: calc(100vh - 56px);
-      overflow: scroll;
       z-index: 1;
     }
 
-    #sidebar .container {
+    #sidebar:hover {
+      overflow: auto;
+    }
+
+    #sidebar .container:not(:nth-child(8)) {
       margin: 0 1vw;
       border-bottom: 1px solid lightgray;
     }
@@ -270,6 +278,7 @@
       </div>
     </div>
   </div>
+  <!-- 側邊欄 -->
   <div id="sidebar">
     <div class="container">
       <a href="#"><i class="fa-solid fa-house"></i><span>首頁</span>
